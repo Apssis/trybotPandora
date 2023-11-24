@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+    <category>
+        <pattern>Hola *</pattern>
+        <template>
+            <srai>HOLA</srai>
+        </template>
+    </category>
 	<category>
 	    <pattern>HOLA</pattern>
 	    <template>
@@ -12,7 +18,13 @@
 	    </template>
 	</category>
 	<category>
-	    <pattern>* ENTRADAS</pattern>
+	    <pattern>* ENTRADAS *</pattern>
+	    <template>
+	        <srai>ENTRADAS</srai>
+	    </template>
+	</category>
+	<category>
+	    <pattern>* ENTRADA *</pattern>
 	    <template>
 	        <srai>ENTRADAS</srai>
 	    </template>
@@ -22,7 +34,61 @@
 	    <template>Tenemos palitos de apio, ensalada o fruta</template>
 	</category>
 	<category>
-	    <pattern>Sopa</pattern>
+	    <pattern>Palitos de apio *</pattern>
+	    <template>Por supuesto que sí. En sopa, ¿será sopa del día o consomé?</template>
+	</category>
+	<category>
+	    <pattern>Ensalada *</pattern>
+	    <template>Claro. ¿Su sopa sería del día o consomé?</template>
+	</category>
+	<category>
+	    <pattern>fruta *</pattern>
+	    <template>Excelente decisión. ¿La sopa será del día o consomé?</template>
+	</category>
+	<category>
+	    <pattern>Sopa *</pattern>
 	    <template>¿Quieres sopa del día o consomé?</template>
+	</category>
+	<category>
+	    <pattern>sopa del día *</pattern>
+	    <template>Le entrego. ¿Gusta tortillas?</template>
+	</category>
+	<category>
+	    <pattern>Consomé *</pattern>
+	    <template>Se lo traigo, ¿Va a querer tortillas?</template>
+	</category>
+	<category>
+	    <pattern>Sí *</pattern>
+	    <template>
+	        <random>
+	            <li>¡Que tenga buen provecho!</li>
+	            <li>¡Disfrute de su comida!</li>
+	            <li>¡Que lo disfrute!</li>
+	        </random>
+	    </template>
+	</category>
+	<category>
+	    <pattern>No *</pattern>
+	    <template>
+	        <random>
+	            <li>¡Que tenga buen provecho!</li>
+	            <li>¡Disfrute de su comida!</li>
+	            <li>¡Que lo disfrute!</li>
+	        </random>
+	    </template>
+	</category>
+	<category>
+	    <pattern>Muchas gracias</pattern>
+	    <template>
+	        <srai>Gracias</srai>
+	    </template>
+	</category>
+	<category>
+	    <pattern>Gracias</pattern>
+	    <template>De nada, estamos para servir.</template>
+	</category>
+	<category>
+	    <pattern>LA * ESTÁ FRÍA</pattern>
+	    <template>Una enorme disculpa, llevo su <star/> a calentar</template>
 	</category>
 </aiml>
